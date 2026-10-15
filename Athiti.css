@@ -87,16 +87,16 @@
     border: 1px solid rgb(226, 232, 240);
     font-size: 14px;
     border-radius: 10px;
-    padding: 5px;
-    
-   
-    
-    
-    
-    
-
-
+    padding: 10px;
+    padding-left: 15px;
+    text-decoration: none;
+ 
 }
+.but-hov:hover {
+    color: rgb(30, 41, 59);
+    text-decoration: none;
+}
+
 
 .button-co2{
     height: 40px;
@@ -112,12 +112,21 @@
     background-color: #003f42;
     color: #fff;
     margin-right: 10px;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 15px;
 
-
-} 
+}
+.button-co2 span i{
+    color: #fff;
+}
+.button-co2:hover{
+    color: #fff;
+}
 
 .icon{
     display: flex;
+        gap: 10px;
 }
 
 /* Hero Section */
@@ -125,13 +134,14 @@
 
 .hero {
     margin-top: 0;
-    min-height: 735px;
-
+    min-height: 0;
+    height: 630px;
+    margin: 0;
     position: relative;
 
     overflow: hidden;
 
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 
@@ -147,7 +157,7 @@
     left: 0;
 
     width: 100%;
-    height: 80%;
+    height: 100%;
 
     object-fit: cover;
 
@@ -694,13 +704,24 @@
 }
 
 /* Slider Image */
-.imag{
+.slider{
     margin-top: 30px;
     height: 400px;
     width: 100%;
-    background-image: url("https://athiti.com/backend/storage/app/public/banner/2026-07-02-6a46629dc1fb3.png");
-    background-size:cover  ;
+    /* background-image: url("https://athiti.com/backend/storage/app/public/banner/2026-07-02-6a46629dc1fb3.png");
+    background-size:cover  ; */
     margin-bottom: 40px;
+}
+.slider .carousel,
+.slider .carousel-inner,
+.slider .carousel-item{
+    height: 100%;
+}
+.slider .carousel-item img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Our Serviecs */
@@ -842,6 +863,7 @@
 .discover-back{
     height: 400px;
     width: 100%;
+    gap: 20px;
     
     background-color: #fff;
     border-radius: 20px;
@@ -854,17 +876,14 @@
 .dis-img{
     height: 300px;
     width: 400px;
-    background-color: black;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    position: relative;
+    border-radius: 20px;
     background-image: url("https://athiti.com/backend/storage/app/public/service_highlight_cards/2026-07-03-6a47bb96da597.png");
     background-size: 400px 300px;
     transition: transform 0.3s ease;
     cursor: pointer;
+    overflow: hidden;
 
-    
-    
-    
 }
 .hov:hover{
     transform: scale(1.05);
@@ -872,9 +891,9 @@
 .dis-img1{
     height: 300px;
     width: 400px;
-    background-color: black;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
     background-image: url("https://athiti.com/backend/storage/app/public/service_highlight_cards/2026-07-03-6a47bb96da597.png");
     background-size: 400px 300px;
     transition: transform 0.3s ease;
@@ -885,9 +904,9 @@
 .dis-img2{
     height: 300px;
     width: 400px;
-    background-color: black;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
     background-image: url("https://athiti.com/backend/storage/app/public/service_highlight_cards/2026-07-03-6a47bb96da597.png");
     background-size: 400px 300px;
     transition: transform 0.3s ease;
@@ -914,24 +933,34 @@
     border-radius: 20px;
 
 }
-/* .card-content{
+.card-content {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
+    bottom: 2px;
+    left: 25px;
     z-index: 2;
-} */
+    width: 80%;
+    color: white;
+    text-align: left;
+}
+
 .card-content h3{
+    /* margin: 0 0 .35rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff; */
     margin: 0 0 .35rem;
     font-size: 1.35rem;
     font-weight: 700;
     color: #fff;
 
 }
+.card-content p{
+    margin: 0;
+    font-size: .6rem;
+    line-height: 1.5;
+    color: #ffffffe0;
 
-
-
+}
 
 /* About Athiti */
 .build-para{
@@ -980,19 +1009,24 @@
 
 .about-detail{  
     display: flex;
-    margin: 20px 0 0 40px;
+     align-items: center;
+    margin: 2px 0 0 40px;
 }
 .about-logo i {
-    font-size: 25px;
-    background-color: #053438;
+    font-size: 20px;
+     background-color: #053438;
     border-radius: 50%;
     color: #fff;
     margin: 5px;
 }
 .about-head{
-    font-size: 20px;
+    font-size: 1rem;
     margin-left: 20px;
-    color: #334155;
+    color: rgb(51, 65, 85);
+    font-family: Inter, sans-serif;
+
+        
+    
 
 }
 
@@ -1010,6 +1044,7 @@ margin-left: 20px   ;
     letter-spacing: -0.02em;
     color: #053438;
     margin: 0px;
+    margin-bottom: 10px;
     font-family: "Playfair Display", serif;
    
 }
@@ -1368,7 +1403,7 @@ margin-left: 20px   ;
 
 
 .footer-container {
-    height: 250px;
+    height: 230px;
     width: 100%;
     margin: auto;
 
@@ -1436,7 +1471,7 @@ margin-left: 20px   ;
 .footer-column a {
     display: block;
 
-    color: #ffffffe0;
+    color: #FFFFFFC7;
     text-decoration: none;
 
     font-size: 16px;
@@ -1452,22 +1487,26 @@ margin-left: 20px   ;
 /* Hover */
 
 .footer-column a:hover {
-    color: #cccccc;
+    color: #fff;
 }
 
 
 /* ================= CONTACT ================= */
 
 .contact p {
+     display: block;
+    color: #FFFFFFC7;
+    text-decoration: none;
     font-size: 16px;
-    line-height: 1.6;
     font-weight: 600;
-    color: #ffffffe0;
-    
-
-    margin-bottom: 17px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    font-family: Inter, sans-serif ;
 }
-
+.contact p:hover{
+    color: #fff;
+}
 
 /* ================= SOCIAL ICONS ================= */
 
@@ -1479,29 +1518,29 @@ margin-left: 20px   ;
 
 
 .social-icons a {
-    width: 52px;
-    height: 52px;
+    width: 40px;
+    height: 40px;
 
     border: 1px solid #78999a;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 0;
-
     color: white;
+    transition: transform ease-in 1s;
 }
 
 
 .social-icons a i {
-    font-size: 27px;
+    font-size: 22px;
 }
 
 
 .social-icons a:hover {
-    background-color: #045155;
+    
+    transform: scale(1.1);
+
 
 }
 .social-icons a i{
@@ -1509,20 +1548,15 @@ margin-left: 20px   ;
 }
 
 
-/* ================= BOTTOM ================= */
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-
     text-align: center;
-
-    padding: 24px 10px 28px;
+    padding: 20px 10px 8px;
 }   
 
 
 .footer-bottom p {
-    font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.88rem;
     color: #ffffffe0;
 }
-
